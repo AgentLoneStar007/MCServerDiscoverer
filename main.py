@@ -7,7 +7,10 @@ except:
     print("You don't have MCStatus installed. Do you want to autoinstall it now?")
     autoinstall = input("<Y/n> ")
     if autoinstall.lower() == 'y':
-        os.system("pip install mcstatus")
+        os.system("python -m pip install mcstatus")
+        print('You need to restart this script for it to work.')
+        input('Press enter to continue...')
+        exit()
     else:
         exit()
 
